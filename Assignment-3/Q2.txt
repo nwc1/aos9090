@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+void first(void)
+{
+printf("This is a beautiful,");
+}
+void second(void){
+ printf("Wonderful life");
+}
+int main(){
+atexit(second);
+atexit(first);
+return 0;
+}
