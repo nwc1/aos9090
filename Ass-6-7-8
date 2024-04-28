@@ -1,0 +1,141 @@
+Assignment 6 : Virtualisation
+
+Reading
+1.Concept of Virtualization.
+● Virtualization is a technology that helps us to install different Operating Systems on a
+hardware.
+● They are completely separated and independent from each other.
+● Virtualization hides the physical characteristics of computing resources from their
+users, their applications or end users. This includes making a single physical resource
+(such as a server, an operating system, an application or a storage device) appear to
+function as multiple virtual resources. It can also include making multiple physical
+resources (such as storage devices or servers) appear as a single virtual resource...”
+2.Virtualization types :
+Server Virtualization :
+It is virtualizing your server infrastructure
+where you do not have to use any more physical
+servers for different purposes.
+Client and Desktop Virtualization :
+This is similar to server virtualization, but
+this time is on the user’s site where you
+virtualize their desktops. We change their
+desktops with thin clients and by utilizing
+the datacenter resources.
+
+Services and applications Virtualization :
+The virtualization technology isolates
+applications from the underlying
+operating system and from other
+applications, in order to increase
+compatibility and manageability. For
+example – Docker can be used for that
+purpose.
+Network Virtualization
+It is a part of virtualization
+infrastructure, which is used
+especially if you are going to
+visualize your servers. It helps you
+in creating multiple switching,
+Vlans, NAT-ing, etc. The following
+illustration shows the VMware
+schema :
+
+Storage Virtualization
+This is widely used in data centers
+where you have a big storage and it
+helps you to create, delete, allocated
+storage to different hardware. This
+allocation is done through network
+connection. The leader on storage is
+SAN. A schematic illustration is
+given below:
+3.Hypervisor and its types.
+A hypervisor is a thin software layer that intercepts operating system calls to the hardware.
+It is also called the Virtual Machine Monitor (VMM). It creates a virtual platform on
+the host computer, on top of which multiple guest operating systems are executed and
+monitored.
+Hypervisors are two types:
+1. Native of Bare Metal Hypervisor
+Native hypervisors are software systems that run directly on the host's hardware to
+control the hardware and to monitor the Guest Operating Systems. The guest
+Operating system runs on a separate level above the hypervisor. All of them have
+Virtual Machine Manager.
+Examples of this virtual machine architecture are Oracle VM, Microsoft Hyper-V,
+VMWare ESX and Xen.
+
+2. Hosted Hypervisor
+Hosted hypervisors are designed to run within a traditional operating system. In
+other words, a hosted hypervisor adds a distinct software layer on top of the host
+operating system. While, the guest operating system becomes a third software level
+above the hardware.
+A well-known example of a hosted hypervisor is Oracle VM VirtualBox. Others
+include VMWare Server and Workstation, Microsoft Virtual PC, KVM, QEMU and
+Parallels.
+Advantages of Virtualization
+1. Using Virtualization for Efficient Hardware Utilization
+2. Using Virtualization to Increase Availability
+3. Disaster Recovery
+4. Save Energy
+5. Deploying Servers too fast
+6. Save Space in your Server Room or Datacenter
+7. Testing and setting up Lab Environment
+8. Shifting all your Local Infrastructure to Cloud in a day
+9. Possibility to Divide Services
+Disadvantages of Virtualization
+1. Extra Costs
+2. Software Licensing
+3. Learn the new Infrastructure
+
+
+
+Assignment 7 : Containerization
+
+Reading
+1. Concept of Containerization and Dockers containers.
+● The old name for containers is Resource Manager, which better describes the
+concept. Containers are defined with various resources or proportion of resources
+and then processes are started using those allocated resources.
+● The operating system and file system is common to all containers and there is no
+additional security imposed.
+● The benefit of containers is that you can allocate defined resources to an application
+and be confident that, even if another application has become very busy, your
+contained application will continue to operate with the resources you have defined. So
+one contained application will not be adversely affected by another application.
+● A container is a standardized unit that packages your code and its dependencies. This
+package is designed to run reliably on any platform, because the container creates its
+own independent environment. With containers, workloads can be carried from one
+place to another, such as from development to production or from on-premises
+environments to the cloud.
+● An example of a containerization platform is Docker. Docker is a popular container
+runtime that simplifies the management of the entire operating system stack required
+for container isolation, including networking and storage. Docker helps customers
+create, package, deploy, and run containers.
+
+
+
+Assignment 8 : Zoning
+
+Reading
+● Zones are an extension of containers according to the marketing material Sun publish.
+However, while zones can be placed inside a container, the principle of zones is rather
+different. Zones are like virtual operating systems running under a single operating system.
+● Zones provide security and a limited degree of isolation; zones have their own hostname,
+password files and IP addresses etc, so appear to remote users as a machine in their own
+right.
+● Further, each zone can be rebooted and each has its own file space. However, a fault that
+results in a kernel panic in one zone will cause the whole machine to reboot, along with all
+the zones it is running.
+● Each zone has a copy of the core OS files and these are placed in a sub-directory of the
+global zone.
+● In a clustered environment, where there is a desire to failover zones, then the zone files will
+be stored on a shared area and each zone will be allocated an independent disk partition.
+Only a single copy of the operating system is actually running and so upgrades to the OS will
+affect all zones.
+Regions
+Regions are geographic locations worldwide where it hosts its data centers.
+Each Region is associated with a geographical name and a Region code.
+Availability Zones
+Inside every Region is a cluster of Availability Zones. An Availability Zone consists of one or
+more data centers with redundant power, networking, and connectivity. These data centers
+operate in discrete facilities in undisclosed locations. They are connected using redundant
+high-speed and low-latency links.
